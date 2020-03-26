@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Sidebar from './Sidebar';
-import Information from './Information';
+import Info from './Info';
 import './styles/Content.css';
 
 const Content = () => (
@@ -10,7 +10,7 @@ const Content = () => (
       <Sidebar />
     </div>
     <div className="content-information">
-      <Information />
+      <Info />
     </div>
   </div>
 );

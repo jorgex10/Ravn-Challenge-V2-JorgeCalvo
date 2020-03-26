@@ -1,0 +1,41 @@
+.info-vehicles {
+  margin-top: 32px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0125em;
+  color: #333333;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14.5px 0;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.15);
+}
+
+.key {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0125em;
+  color: #828282;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.0125em;
+  color: #333333;
+}
