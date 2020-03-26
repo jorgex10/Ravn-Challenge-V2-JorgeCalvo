@@ -4,13 +4,11 @@ import Content from './components/Content';
 import './App.css';
 import './fonts/SFProDisplay.ttf';
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Content />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Navbar />
+    <Content />
+  </div>
+);
 
 export default App;

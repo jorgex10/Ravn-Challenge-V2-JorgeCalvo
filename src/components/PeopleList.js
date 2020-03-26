@@ -1,17 +1,18 @@
 import React from 'react';
+import Person from './Person';
 
-import './styles/PeopleList.css';
+class PeopleList extends React.Component {
+  render() {
+    const { people, onLoadMore } = this.props;
 
-const PeopleList = () => (
-  <div className="person-item">
-    <div>
-      <p className="person-name">Luke Skywalker</p>
-      <p className="person-info">Human from Tatooine</p>
-    </div>
-    <div>
-      <i className="arrow right" />
-    </div>
-  </div>
-);
+    return (
+      <>
+        {
+          people.map((person) => (<Person person={person.node} key={person.node.id} />))
+        }
+      </>
+    );
+  }
+}
 
 export default PeopleList;
