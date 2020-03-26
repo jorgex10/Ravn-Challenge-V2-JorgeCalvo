@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 52px);
+}
+
+.content-sidebar {
+  flex-grow: 1;
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.content-information {
+  flex-grow: 4;
+  padding: 20px;
+}
