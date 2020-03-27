@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/Person.css';
+import './styles/Person.scss';
 
 const Person = ({ person, onClick }) => {
   const handleClick = () => {

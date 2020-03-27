@@ -1,9 +1,11 @@
+@import '../../assets/colors.scss';
+
 p {
   margin: 0;
 }
 
 i {
-  border: solid black;
+  border: solid $black_txt;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -18,7 +20,7 @@ i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.15);
+  box-shadow: $row_box_shadow;
   padding: 16px;
 }
 
@@ -29,7 +31,7 @@ i {
   display: flex;
   align-items: center;
   letter-spacing: 0.0125em;
-  color: #333333;
+  color: $color_txt_grey;
 }
 
 .person-info {
@@ -38,5 +40,5 @@ i {
   display: flex;
   align-items: center;
   letter-spacing: 0.0125em;
-  color: #828282;
+  color: $color_txt_grey_light;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
-import './App.css';
-import './fonts/SFProDisplay.ttf';
+import './App.scss';
+import './assets/fonts/SFProDisplay.ttf';
 
 const App = () => (
   <div>

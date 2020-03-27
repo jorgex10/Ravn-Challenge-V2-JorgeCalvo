@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/InfoStyles.css';
+import './styles/InfoStyles.scss';
 
 const InfoDescription = ({ person }) => {
   const {

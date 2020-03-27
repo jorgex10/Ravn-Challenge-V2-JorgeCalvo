@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 .content {
   display: flex;
   flex-direction: row;
@@ -6,7 +8,7 @@
 
 .content-sidebar {
   flex-grow: 1;
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: $content_box_shadow;
   overflow-y: scroll;
 }
 

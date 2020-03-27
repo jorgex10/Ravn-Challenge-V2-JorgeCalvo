@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Sidebar from './Sidebar';
 import Info from './Info';
-import './styles/Content.css';
+import './styles/Content.scss';
 
 const Content = () => {
   const [personId, setPersonId] = useState(null);

@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import InfoDescription from './InfoDescription';
 import InfoVehicles from './InfoVehicles';
-import './styles/Info.css';
+import './styles/Info.scss';
 import Loading from './Loading';
 
 const QUERY_PERSON = gql`

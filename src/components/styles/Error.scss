@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 .error-message {
   font-weight: bold;
   font-size: 17px;
@@ -7,6 +9,6 @@
   align-items: center;
   text-align: center;
   letter-spacing: 0.0125em;
-  color: #EC5757;
+  color: $error_txt_red;
   padding: 16px 0;
 }

@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 .loading {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.0125em;
-  color: #828282;
+  color: $color_txt_grey_light;
 }
 
 .lds-spinner {
@@ -36,7 +38,7 @@
   width: 2px;
   height: 6px;
   border-radius: 20%;
-  background: #000;
+  background: $black_txt;
 }
 
 .lds-spinner div:nth-child(1) {
