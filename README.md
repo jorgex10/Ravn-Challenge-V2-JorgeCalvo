@@ -40,7 +40,11 @@ This project was developed as Code Challenge provided by Ravn, It use the [Ravn 
 ### This is the app when all was loaded correctly
 <img src="./public/desc_images/full_page.png" width="600" height="400">
 
-Additional to this, the project is using [Eslint](https://eslint.org/docs/user-guide/getting-started) like tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+Additional to this, the project is using [Eslint](https://eslint.org/docs/user-guide/getting-started) like tool for identifying and reporting on patterns found in
+ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+
+Also the project use GraphQL and [Apollo GraphQL Client](https://www.apollographql.com/docs/react/get-started/) for manage and handle the data provided.
+
 
 ## Tecnologies used
 - Node JS.<br />
