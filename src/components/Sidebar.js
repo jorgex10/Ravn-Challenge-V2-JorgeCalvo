@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useState, useEffect } from 'react';
+
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import PeopleList from './PeopleList';
@@ -31,7 +32,7 @@ const QUERY_PEOPLE = gql`
   }
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ onPersonClick }) => {
   const {
     loading, error, data, fetchMore,
   } = useQuery(QUERY_PEOPLE);
@@ -76,8 +77,8 @@ const Sidebar = () => {
   if (error) return <Error />;
 
   return (
-    <div className="scroll-div">
-      {data?.allPeople && <PeopleList people={data.allPeople.edges} />}
+    <div>
+      {data?.allPeople && <PeopleList people={data.allPeople.edges} onPersonClick={onPersonClick} />}
       { (loading || isLoadingMore) && <Loading /> }
     </div>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 import Person from './Person';
 
-const PeopleList = ({ people }) => (
+const PeopleList = ({ people, onPersonClick }) => (
   <>
     {
-        people.map((person) => (<Person person={person.node} key={person.node.id} />))
-      }
+      people.map((person) => (<Person person={person.node} key={person.node.id} onClick={onPersonClick} />))
+    }
   </>
 );
 export default PeopleList;

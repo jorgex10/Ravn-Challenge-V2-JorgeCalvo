@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Sidebar from './Sidebar';
 import Info from './Info';
 import './styles/Content.css';
 
-const Content = () => (
-  <div className="content">
-    <div className="content-sidebar">
-      <Sidebar />
+const Content = () => {
+  const [personId, setPersonId] = useState(null);
+
+  return (
+    <div className="content">
+      <div className="content-sidebar">
+        <Sidebar onPersonClick={(person) => setPersonId(person.id)} />
+      </div>
+      <div className="content-information">
+        <Info personId={personId} />
+      </div>
     </div>
-    <div className="content-information">
-      <Info />
-    </div>
-  </div>
-);
+  );
+};
 
 export default Content;

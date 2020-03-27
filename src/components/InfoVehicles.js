@@ -2,15 +2,16 @@ import React from 'react';
 
 import './styles/InfoStyles.css';
 
-const InfoVehicles = () => (
+const InfoVehicles = ({ vehicles }) => (
   <div className="info-vehicles">
     <p className="title">Vehicles</p>
-    <div className="row">
-      <p className="key">Snowspeeder</p>
-    </div>
-    <div className="row">
-      <p className="key">Imperial Speeder Bike</p>
-    </div>
+    {
+      vehicles.map((vehicle) => (
+        <div className="row" key={vehicle.id}>
+          <p className="key">{vehicle.name}</p>
+        </div>
+      ))
+    }
   </div>
 );
 
