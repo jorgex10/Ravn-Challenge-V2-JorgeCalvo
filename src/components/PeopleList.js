@@ -1,18 +1,18 @@
 import React from 'react';
 import Person from './Person';
+import useInfiniteScroll from '../hooks/useInfiniteScroll';
 
-class PeopleList extends React.Component {
-  render() {
-    const { people, onLoadMore } = this.props;
+const PeopleList = ({ people, onLoadMore }) => {
+  useInfiniteScroll(onLoadMore);
 
-    return (
-      <>
-        {
-          people.map((person) => (<Person person={person.node} key={person.node.id} />))
-        }
-      </>
-    );
-  }
-}
+  return (
+    <>
+      {
+        people.map((person) => (<Person person={person.node} key={person.node.id} />))
+      }
+    </>
+  );
+};
+
 
 export default PeopleList;

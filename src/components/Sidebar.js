@@ -3,10 +3,12 @@ import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import PeopleList from './PeopleList';
+import Loading from './Loading';
+import Error from './Error';
 
 const QUERY_PEOPLE = gql`
   query getPeople($cursor: String) {
-    allPeople(first: 12, after: $cursor) {
+    allPeople(first: 5, after: $cursor) {
       edges {
         node {
           id
@@ -32,38 +34,43 @@ const QUERY_PEOPLE = gql`
 const Sidebar = () => {
   const {
     loading, error, data, fetchMore,
-  } = useQuery(QUERY_PEOPLE);
+  } = useQuery(QUERY_PEOPLE, {
+    pollInterval: 1500,
+  });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
   return (
-    <PeopleList
-      people={data.allPeople.edges}
-      onLoadMore={() => fetchMore({
-        variables: {
-          cursor: data.allPeople.pageInfo.endCursor,
-        },
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          const newEdges = fetchMoreResult.allPeople.edges;
-          const { pageInfo } = fetchMoreResult.allPeople;
+    <div className="scroll-div">
+      <PeopleList
+        people={data.allPeople.edges}
+        onLoadMore={() => fetchMore({
+          variables: {
+            cursor: data.allPeople.pageInfo.endCursor,
+          },
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            const newEdges = fetchMoreResult.allPeople.edges;
+            const { pageInfo } = fetchMoreResult.allPeople;
 
-          if (!fetchMoreResult || fetchMoreResult === 'undefined' || newEdges.length === 0) {
-            return previousResult;
-          }
-
-          return (
-            {
-              allPeople: {
-                __typename: previousResult.allPeople.__typename,
-                edges: [...newEdges, ...previousResult.allPeople.edges],
-                pageInfo,
-              },
+            if (!fetchMoreResult || fetchMoreResult === 'undefined' || newEdges.length === 0) {
+              return previousResult;
             }
-          );
-        },
-      })}
-    />
+
+            return (
+              {
+                allPeople: {
+                  __typename: previousResult.allPeople.__typename,
+                  edges: [...newEdges, ...previousResult.allPeople.edges],
+                  pageInfo,
+                },
+              }
+            );
+          },
+        })}
+      />
+      <Loading />
+    </div>
   );
 };
 
