@@ -1,68 +1,52 @@
+# Ravn Star Wars
+
+This repository contains the source code for the Ravn Star Wars GraphQL Code Challenge provided by Ravn.
+
+## Setup
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make sure you have `Node JS` and `create-react-app` installed on you local.
 
 ## Available Scripts
 
-In the project directory, you can run:
+Clone the repository. In the project directory, you can run:
 
-### `yarn start`
+### `npm install`
 
-Runs the app in the development mode.<br />
+Install all dependencies for the project based on `package.json` file.<br />
+The project will create a `package-lock.json`.
+
+### `npm start`
+
+After install dependencies you can run the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Ravn Star Wars Registry
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was developed as Code Challenge provided by Ravn, It use the [Ravn Star Wars](https://swapi-graphql-ravn.herokuapp.com/) API that allow get all required information for the main purpose of project: Generate a sidebar with the information about all people from Star Wars, see their specie and their origin place. Also we can access to the specific information about a certain Person and their characteristics like their eyes color, skin color, hair color, birth year and the posibility to see if the person has vehicles or not.
 
-### `yarn build`
+### This is the app when it can not get the initial required information
+<img src="./public/desc_images/failed_data.png" width="600" height="400">
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### This is the app when is loading initial data
+<img src="./public/desc_images/loading_data.png" width="600" height="400">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### This is the app when has loaded the first 5 people
+<img src="./public/desc_images/loading_info.png" width="600" height="400">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### This is the app when all was loaded correctly
+<img src="./public/desc_images/full_page.png" width="600" height="400">
 
-### `yarn eject`
+Additional to this, the project is using [Eslint](https://eslint.org/docs/user-guide/getting-started) like tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tecnologies used
+- Node JS.<br />
+- React JS.<br />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+and some packages like:
+- graphql.<br />
+- apollo-boost.<br />
+- node-sass.<br />
