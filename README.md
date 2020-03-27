@@ -5,7 +5,7 @@ This repository contains the source code for the Ravn Star Wars GraphQL Code Cha
 ## Setup
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Make sure you have `Node JS` and `create-react-app` installed on you local.
+Make sure you have `Node JS` and `create-react-app` installed on your local.
 
 ## Available Scripts
 
